@@ -1,0 +1,349 @@
+.builder-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--app-bg);
+}
+
+/* ===== Top bar ===== */
+.builder-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 56px;
+  background-color: var(--app-topbar-bg);
+  color: var(--app-topbar-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.topbar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.topbar-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--app-topbar-text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 0 1rem;
+  height: 36px;
+  min-width: 44px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+  white-space: nowrap;
+}
+
+.topbar-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.topbar-btn--accent {
+  background-color: var(--app-accent);
+  border-color: var(--app-accent);
+}
+
+.topbar-btn--accent:hover {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Hamburger — hidden on desktop, shown on tablet/mobile */
+.topbar-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  padding: 0;
+  width: 44px;
+}
+
+/* Help button */
+.topbar-help-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0;
+  width: 36px;
+}
+
+/* ===== Mobile tab switcher ===== */
+.builder-mobile-tabs {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background-color: var(--app-sidebar-bg);
+  border-bottom: 1px solid var(--app-border);
+  height: 44px;
+}
+
+.mobile-tab {
+  flex: 1;
+  height: 100%;
+  min-height: 44px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #64748b;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.mobile-tab--active {
+  color: var(--app-accent);
+  border-bottom-color: var(--app-accent);
+}
+
+/* ===== Drawer backdrop (hidden by default) ===== */
+.drawer-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 140;
+}
+
+/* ===== Body layout ===== */
+.builder-body {
+  display: flex;
+  flex: 1;
+  margin-top: 56px;
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.builder-sidebar-wrapper {
+  width: 320px; /* default; overridden by inline style on desktop */
+  flex-shrink: 0;
+  position: relative;
+  background-color: var(--app-sidebar-bg);
+  border-right: 1px solid var(--app-border);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-resize-handle {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 10;
+}
+
+.sidebar-resize-handle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: transparent;
+  transition: background 150ms ease;
+}
+
+.sidebar-resize-handle:hover::after {
+  background: var(--app-accent, #6366f1);
+  opacity: 0.5;
+}
+
+.builder-sidebar {
+  padding: 0.5rem 0;
+}
+
+/* Drawer close button — hidden on desktop */
+.drawer-close-btn {
+  display: none;
+}
+
+/* ===== Accordion ===== */
+.accordion-item {
+  border-bottom: 1px solid var(--app-border);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.accordion-trigger:hover {
+  background-color: #f8fafc;
+}
+
+.accordion-item--open .accordion-trigger {
+  color: var(--app-accent);
+  background-color: #f0f4ff;
+}
+
+.accordion-label {
+  flex: 1;
+}
+
+.accordion-chevron {
+  font-size: 0.625rem;
+  color: #94a3b8;
+  margin-left: 0.5rem;
+}
+
+.accordion-panel {
+  padding: 0.75rem 1.25rem 1rem;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--app-border);
+}
+
+/* ===== Preview panel ===== */
+.builder-preview-wrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Tablet (640px – 1023px): slide-over drawer ===== */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .sidebar-resize-handle { display: none; }
+  .topbar-hamburger {
+    display: flex;
+  }
+
+  .drawer-backdrop {
+    display: none; /* shown when .drawer-open is active — override below */
+  }
+
+  .builder-sidebar-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 150;
+    width: 320px;
+    transform: translateX(-100%);
+    transition: transform 250ms ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.18);
+    overflow-y: auto;
+    /* Reset flex-shrink (sidebar is now out-of-flow) */
+    flex-shrink: unset;
+  }
+
+  .builder-sidebar-wrapper.drawer-open {
+    transform: translateX(0);
+  }
+
+  /* Show backdrop only when drawer is open */
+  .builder-sidebar-wrapper.drawer-open ~ * .drawer-backdrop,
+  .drawer-backdrop:has(~ .builder-sidebar-wrapper.drawer-open) {
+    display: block;
+  }
+
+  /* Simpler: backdrop is a sibling — target via JS-applied class on shell */
+  .builder-shell:has(.builder-sidebar-wrapper.drawer-open) .drawer-backdrop {
+    display: block;
+  }
+
+  .drawer-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 48px;
+    background: var(--app-topbar-bg);
+    color: var(--app-topbar-text);
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 1rem;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .drawer-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===== Mobile (< 640px) ===== */
+@media (max-width: 639px) {
+  .sidebar-resize-handle { display: none; }
+  .builder-mobile-tabs {
+    display: flex;
+  }
+
+  .topbar-hamburger {
+    display: none; /* tab switcher handles navigation */
+  }
+
+  .builder-body {
+    margin-top: calc(56px + 44px);
+  }
+
+  .builder-sidebar-wrapper {
+    display: none;
+    width: 100%;
+    border-right: none;
+  }
+
+  .builder-sidebar-wrapper.mobile-visible {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .builder-preview-wrapper {
+    display: none;
+  }
+
+  .builder-preview-wrapper.mobile-visible {
+    display: flex;
+  }
+
+  /* Compact topbar buttons on small screens */
+  .topbar-btn {
+    padding: 0 0.625rem;
+    font-size: 0.8125rem;
+  }
+}

@@ -1,0 +1,37 @@
+.pv-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pv-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.pv-navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: default;
+}
+
+.pv-navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.pv-navbar-link {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  cursor: default;
+  user-select: none;
+}

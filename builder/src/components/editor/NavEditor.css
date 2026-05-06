@@ -1,0 +1,25 @@
+.nav-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: #fff;
+  border: 1px solid var(--app-border, #e2e8f0);
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-label {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.nav-href {
+  flex: 1;
+  min-width: 0;
+}

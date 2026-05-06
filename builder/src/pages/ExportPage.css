@@ -1,0 +1,168 @@
+.export-page {
+  min-height: 100vh;
+  background-color: var(--app-bg);
+  padding: 2rem 1rem;
+}
+
+.export-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.export-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.export-intro {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.export-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.export-download-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 2rem;
+  background: var(--app-accent, #6366f1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+  font-family: inherit;
+  margin-bottom: 2rem;
+  transition: background-color 150ms ease;
+}
+
+.export-download-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.export-download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.deploy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.deploy-card {
+  background: #fff;
+  border: 1px solid var(--app-border, #e2e8f0);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.deploy-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.deploy-card-body {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.deploy-card-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--app-accent, #6366f1);
+  text-decoration: none;
+}
+
+.deploy-card-link:hover {
+  text-decoration: underline;
+}
+
+.deploy-card-steps {
+  font-size: 0.8rem;
+  color: #475569;
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
+
+.deploy-card-code {
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  color: #334155;
+  overflow-x: auto;
+  font-family: ui-monospace, 'Fira Code', monospace;
+}
+
+.deploy-card--highlight {
+  border-color: var(--app-accent, #6366f1);
+  background: #f5f3ff;
+}
+
+.deploy-card--muted {
+  background: #f8fafc;
+  opacity: 0.8;
+}
+
+.deploy-card-coming-soon {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 0.2rem 0.65rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.export-note {
+  font-size: 0.875rem;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.export-back-btn {
+  background: none;
+  border: 1px solid var(--app-border, #e2e8f0);
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  min-height: 44px;
+  font-family: inherit;
+  transition: background-color 150ms ease;
+}
+
+.export-back-btn:hover {
+  background: #f1f5f9;
+}

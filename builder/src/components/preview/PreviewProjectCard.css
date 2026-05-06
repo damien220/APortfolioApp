@@ -1,0 +1,85 @@
+.pv-project-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.pv-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px var(--color-card-shadow);
+}
+
+.pv-project-card.featured {
+  border-color: var(--color-accent);
+}
+
+.pv-card-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.pv-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pv-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.pv-card-content {
+  padding: 1.5rem;
+}
+
+.pv-card-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+}
+
+.pv-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--color-text);
+}
+
+.pv-card-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pv-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.pv-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  font-weight: 500;
+}

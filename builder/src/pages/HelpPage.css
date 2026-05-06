@@ -1,0 +1,150 @@
+.help-page {
+  min-height: 100vh;
+  background-color: var(--app-bg);
+  padding: 1rem;
+}
+
+.help-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.help-topbar {
+  margin-bottom: 1.5rem;
+}
+
+.help-back-btn {
+  background: none;
+  border: 1px solid var(--app-border, #e2e8f0);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #475569;
+  cursor: pointer;
+  min-height: 44px;
+  font-family: inherit;
+  transition: background-color 150ms ease;
+}
+
+.help-back-btn:hover {
+  background: #f1f5f9;
+}
+
+.help-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.help-intro {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.help-body {
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.help-section {
+  margin-bottom: 2.5rem;
+}
+
+.help-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--app-accent, #6366f1);
+}
+
+.help-section h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.help-steps,
+.help-list {
+  padding-left: 1.5rem;
+  color: #334155;
+  line-height: 1.9;
+}
+
+.help-steps li,
+.help-list li {
+  margin-bottom: 0.15rem;
+}
+
+.help-code {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+}
+
+.help-glossary {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.5rem 1rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.help-glossary dt {
+  font-weight: 600;
+  color: var(--app-accent, #6366f1);
+  padding-top: 0.1rem;
+}
+
+.help-glossary dd {
+  margin: 0;
+}
+
+.help-section a {
+  color: var(--app-accent, #6366f1);
+  text-decoration: underline;
+}
+
+.help-section code {
+  background: #f1f5f9;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  color: #1e293b;
+}
+
+@media (max-width: 640px) {
+  .help-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .help-heading {
+    font-size: 1.5rem;
+  }
+
+  .help-glossary {
+    grid-template-columns: 1fr;
+  }
+
+  .help-glossary dt {
+    margin-top: 0.75rem;
+  }
+
+  .help-glossary dt:first-child {
+    margin-top: 0;
+  }
+}

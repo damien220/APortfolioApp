@@ -1,0 +1,18 @@
+.pv-contact-intro {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+}
+
+.pv-contact-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: default;
+  font-family: inherit;
+}
